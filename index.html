@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- масштабирование страницы при открытии -->
+  <title>Habit tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icons/Achievement 2 (1).svg">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">
+      Мои привычки на сегодня:
+    </h1>
+  </header>
+
+  <main class="main">
+
+<!-- ВОДА -->
+    <section class="section section-water">
+      <h2 class="title-water">
+        Вода ( цель: 1.5-1.7л )
+      </h2>
+      <input type="number" class="input-water" id="waterInput" placeholder="Сколько стаканов ( 1 стакан = 250 мл )" min = "0">
+      <button class="button button-add-water" oneclick = "addWater()">
+        Добавить
+      </button>
+      <p class="subtitle-water">
+        Выпито: <span class="span-water-total" id="waterTotal">0</span>
+      </p>
+    </section>
+
+<!-- ТРЕНИРОВКИ -->
+    <section class="section section-training">
+      <h2 class="subtitle-training">
+        Тренировки/йога ( цель: 15+ мин )
+      </h2>
+      <label class= "label-training">
+        <input type="checkbox" id="workoutCheck" class="input-training"> Выполнено
+      </label>
+      <input type="number" id="workoutMinutes" placeholder="Сколько минут" min="0" class="input-workout-minutes">
+    </section>
+
+<!-- ПИТАНИЕ -->
+    <section class="section section-food">
+      <h2 class="food-title">
+        Питание
+      </h2>
+      <input type="text" id="foodInput" placeholder="Что съела" class="input-food">
+      <button class="button button-add-food">
+        Добавить
+      </button>
+    </section>
+
+    <!-- ЧТЕНИЕ/АНГЛИЙСКИЙ -->
+     <section class="section section-read">
+      <h2 class="read-title">
+        Чтение/Английский ( цель: 20 страниц/мин)
+      </h2>
+      <select name="read" id="activitySelect">
+        <option value="reading" class="option option-reading">
+          Чтение
+        </option>
+        <option value="english" class="option option-english">
+          Английский
+        </option>
+      </select>
+      <input type="number" id="activityAmount" placeholder="Сколько страниц/мин" min="0" class="input input-read">
+     </section>
+
+    <!-- ФРОНТЕНД -->
+     <section class="section section-front">
+      <h2 class="title-front">
+        Фронтенд (цель: 4-6 часов)
+      </h2>
+      <input type="number" id="frontendHours" placeholder="Сколько часов" min="0" step="0.5" class="input-front">
+      <input type="text" id="frontendNotes" placeholder="Что изучала" class="input-notes">
+     </section>
+     
+<!-- КНОПКА СОХРАНЕНИЯ -->
+     <button oneclick="saveDay()" class="button-save-day">
+      Сохранить день
+    </button>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
