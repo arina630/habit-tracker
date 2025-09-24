@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <h1 class="title">
-      Мои привычки на сегодня:
+      МОИ ПРИВЫЧКИ НА СЕГОДНЯ:
     </h1>
   </header>
 
@@ -20,12 +20,14 @@
 <!-- ВОДА -->
     <section class="section section-water">
       <h2 class="title-water">
-        Вода ( цель: 1.5-1.7л )
+        Вода<br>(цель: 1.5-1.7л)
       </h2>
+      <div class="watre-block">
       <input type="number" class="input-water" id="waterInput" placeholder="Сколько стаканов ( 1 стакан = 250 мл )" min = "0">
       <button class="button button-add-water" oneclick = "addWater()">
         Добавить
       </button>
+      </div>
       <p class="subtitle-water">
         Выпито: <span class="span-water-total" id="waterTotal">0</span>
       </p>
@@ -34,11 +36,15 @@
 <!-- ТРЕНИРОВКИ -->
     <section class="section section-training">
       <h2 class="subtitle-training">
-        Тренировки/йога ( цель: 15+ мин )
+        Тренировки/йога<br>(цель: 15+ мин)
       </h2>
-      <label class= "label-training">
-        <input type="checkbox" id="workoutCheck" class="input-training"> Выполнено
+      <input type="checkbox" id="checkbox" class="checkbox">
+      <label for="checkbox" class="label-training">
+        Выполнено
       </label>
+      <!-- <label class= "label-training">
+        <input type="checkbox" id="workoutCheck" class="input-training"> Выполнено
+      </label> -->
       <input type="number" id="workoutMinutes" placeholder="Сколько минут" min="0" class="input-workout-minutes">
     </section>
 
@@ -56,7 +62,7 @@
     <!-- ЧТЕНИЕ/АНГЛИЙСКИЙ -->
      <section class="section section-read">
       <h2 class="read-title">
-        Чтение/Английский ( цель: 20 страниц/мин)
+        Чтение/Английский<br>(цель: 20 страниц/мин)
       </h2>
       <select name="read" id="activitySelect">
         <option value="reading" class="option option-reading">
@@ -72,7 +78,7 @@
     <!-- ФРОНТЕНД -->
      <section class="section section-front">
       <h2 class="title-front">
-        Фронтенд (цель: 4-6 часов)
+        Фронтенд<br>(цель: 4-6 часов)
       </h2>
       <input type="number" id="frontendHours" placeholder="Сколько часов" min="0" step="0.5" class="input-front">
       <input type="text" id="frontendNotes" placeholder="Что изучала" class="input-notes">
