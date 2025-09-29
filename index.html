@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/icons/Achievement 2 (1).svg">
 </head>
+
 <body>
+  <div class="sticky-header-block"></div>
   <header class="header">
     <h1 class="title">
       МОИ ПРИВЫЧКИ НА СЕГОДНЯ:
@@ -25,7 +27,7 @@
       </div>
       <div class="current-user-data-block">
       <div class="watre-block">
-      <input type="number" class="input-water" id="waterInput" placeholder="Сколько стаканов ( 1 стакан = 250 мл )" min = "0">
+      <input type="number" class="input-water" id="waterInput" placeholder="СКОЛЬКО СТАКАНОВ(1ст=250мл)" min = "0">
       <button class="button button-add-water" oneclick = "addWater()">
         Добавить
       </button>
@@ -45,10 +47,7 @@
       <div class="current-user-data-block">
       <input type="checkbox" id="checkbox" class="checkbox">
       <label for="checkbox" class="label-training"></label>
-      <!-- <label class= "label-training">
-        <input type="checkbox" id="workoutCheck" class="input-training"> Выполнено
-      </label> -->
-      <input type="number" id="workoutMinutes" placeholder="Сколько минут" min="0" class="input-workout-minutes">
+      <input type="number" id="workoutMinutes" placeholder="СКОЛЬКО МИНУТ" min="0" class="input-workout-minutes">
       </div>
     </section>
 
@@ -59,7 +58,7 @@
       <p class="subtitle">(сбалансированное)</p>
       </div>
       <div class="current-user-data-block">
-      <input type="text" id="foodInput" placeholder="Что съела" class="input-food">
+      <input type="text" id="foodInput" placeholder="ЧТО СЪЕЛА" class="input-food">
       <button class="button button-add-food">
         Добавить
       </button>
@@ -81,7 +80,7 @@
           Английский
         </option>
       </select>
-      <input type="number" id="activityAmount" placeholder="Сколько страниц/мин" min="0" class="input input-read">
+      <input type="number" id="activityAmount" placeholder="СКОЛЬКО СТР/МИН" min="0" class="input input-read">
       </div>
      </section>
 
@@ -92,14 +91,14 @@
       <p class="subtitle">(цель: 4-6 часов)</p>
       </div>
       <div class="current-user-data-block">
-      <input type="number" id="frontendHours" placeholder="Сколько часов" min="0" step="0.5" class="input-front">
-      <input type="text" id="frontendNotes" placeholder="Что изучала" class="input-notes">
+      <input type="number" id="frontendHours" placeholder="СКОЛЬКО ЧАСОВ" min="0" step="0.5" class="input-front">
+      <input type="text" id="frontendNotes" placeholder="ЧТО ИЗУЧАЛА" class="input-notes">
       </div>
      </section>
      
 <!-- КНОПКА СОХРАНЕНИЯ -->
-     <button oneclick="saveDay()" class="button-save-day">
-      Сохранить день
+     <button oneclick="saveDay()" class="button-save-the-day">
+      СОХРАНИТЬ ДЕНЬ
     </button>
 
   </main>
