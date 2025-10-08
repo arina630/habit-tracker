@@ -313,6 +313,19 @@ input:not([type="checkbox"]):focus {
   box-shadow: inset 10px 1px 15px 7px #773b7f64;
 }
 
+.button:hover {
+  transition: 200ms ease-in;
+  background-color: #c988ce79;
+  -webkit-text-stroke: 1px #fbf7ff;
+  font-size: clamp(40px, 2.60vw, 50px);
+}
+
+.button:active { /*focus если, то задержатся эти стили пока не кликнешь где то на экране где угодно*/
+  background-color: #16008179;
+  -webkit-text-stroke: 1px #fbf7ff;
+  font-size: clamp(40px, 2.60vw, 50px);
+}
+
 /* CSS  из интернета*/
 .button-save-the-day {
   background-color: transparent;
