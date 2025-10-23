@@ -245,7 +245,7 @@ main {
   -webkit-text-stroke: 2px #3B806B;
 }
 
-.subtitle-water {
+.subtitleTotal {
   font-family: 'SourceCodePro';   
   font-size: clamp(30px, 2.86vw, 55px);
   font-weight: 400;

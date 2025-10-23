@@ -28,13 +28,11 @@
       </div>
       <div class="current-user-data-block">
       <input type="number" class="input-water" id="waterInput" placeholder="СКОЛЬКО СТАКАНОВ(1ст=250мл)" min = "0">
-      <button class="button button-add-water" oneclick = "addWater()">
+      <button class="button button-add-water" onclick = "addWater()">
         Добавить
       </button>
       </div>
-      <p class="subtitle-water">
-        Выпито: <span class="span-water-total" id="waterTotal">0</span>
-      </p>
+      <p id="waterTotal" class="subtitleTotal">Выпито: <span class="span-water-total">0</span> </p>
     </section>
 
 <!-- ТРЕНИРОВКИ -->
@@ -46,8 +44,9 @@
       <div class="current-user-data-block-checkbox">
       <input type="checkbox" id="checkbox" class="checkbox">
       <label for="checkbox" class="label-training"></label>
-      <input type="number" id="workoutMinutes" placeholder="СКОЛЬКО МИНУТ" min="0" class="input-workout-minutes">
+      <input type="number" id="workoutMinutes" placeholder="СКОЛЬКО МИНУТ" min="0" onchange = "addWorkout()" class="input-workout-minutes">
       </div>
+      <p class="subtitleTotal" id="workoutStatus">Не выполнено</p>
     </section>
 
 <!-- ПИТАНИЕ -->
@@ -58,9 +57,10 @@
       </div>
       <div class="current-user-data-block">
       <input type="text" id="foodInput" placeholder="ЧТО СЪЕЛА" class="input-food">
-      <button class="button button-add-food">
+      <button onclick="addFood()" class="button button-add-food">
         Добавить
       </button>
+      <ul class="" id="foodList"></ul><!--?????????????????????????????????????????????????????-->
     </div>
     </section>
 
@@ -79,8 +79,9 @@
           Английский
         </option>
       </select>
-      <input type="number" id="activityAmount" placeholder="СКОЛЬКО СТР/МИН" min="0" class="input input-read">
+      <input type="number" id="activityAmount" placeholder="СКОЛЬКО СТР/МИН" min="0" onchange="addActivity()" class="input input-read">
       </div>
+      <p id="activityStatus" class="subtitleTotal">Чтение: 0 мин/страниц</p>
      </section>
 
     <!-- ФРОНТЕНД -->
@@ -90,13 +91,14 @@
       <p class="subtitle">(цель: 4-6 часов)</p>
       </div>
       <div class="current-user-data-block">
-      <input type="number" id="frontendHours" placeholder="СКОЛЬКО ЧАСОВ" min="0" step="0.5" class="input-front">
-      <input type="text" id="frontendNotes" placeholder="ЧТО ИЗУЧАЛА" class="input-notes">
+      <input type="number" id="frontendHours" placeholder="СКОЛЬКО ЧАСОВ" min="0" step="0.5" onchange="addFrontend()" class="input-front">
+      <input type="text" id="frontendNotes" placeholder="ЧТО ИЗУЧАЛА" onchange="addFrontend()" class="input-notes">
       </div>
+      <p id="frontendStatus" class="subtitleTotal">Фронтенд: 0 ч, заметки: нет</p>
      </section>
      
 <!-- КНОПКА СОХРАНЕНИЯ -->
-     <button oneclick="saveDay()" class="button-save-the-day">
+     <button onclick="saveDay()" class="button-save-the-day">
       СОХРАНИТЬ ДЕНЬ
     </button>
 
